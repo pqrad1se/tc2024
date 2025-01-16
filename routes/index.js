@@ -8,27 +8,50 @@ router.get('/', function(req, res, next) {
 
 /* Страница Юпитера */
 router.get('/jupiter', function(req, res, next) {
-  res.send("<h1>Страница Юпитера</h1>")
-});
+  res.render('planets', {
+    title: "Юпитер",
+    picture: "images/jupiter.jpg",
+    desc: "Пятая планета от Солнца и самая большая в Солнечной системе."
+    });
+  });
+
 
 /* Страница Марса */
 router.get('/mars', function(req, res, next) {
-  res.send("<h1>Страница Марса</h1>")
-});
+  res.render('planets', {
+      title: "Марс",
+      picture: "images/mars.jpg",
+      desc: "Четвёртая планета от Солнца, известна как 'Красная планета' из-за своего цвета."
+    });
+  });
 
-/* Страница Меркурия */
+
+  /* Страница Меркурия */
 router.get('/mercury', function(req, res, next) {
-  res.send("<h1>Страница Меркурия</h1>")
+  res.render('planets', {
+      title: "Меркурий",
+      picture: "images/mercury.jpg",
+      desc: "Ближайшая планета к Солнцу и самая маленькая в Солнечной системе."
+  });
 });
 
-/* Страница Нептуна */
+
+  /* Страница Нептуна */
 router.get('/neptune', function(req, res, next) {
-  res.send("<h1>Страница Нептуна</h1>")
+  res.render('planets', {
+      title: "Нептун",
+      picture: "images/neptune.jpg",
+      desc: "Восьмая и самая дальняя от Солнца планета, известная своими мощными ветрами."
+});
 });
 
-/* Страница Урана */
+  /* Страница Урана */
 router.get('/uranus', function(req, res, next) {
-  res.send("<h1>Страница Урана</h1>")
+  res.render('planets', {
+    title: "Уран",
+    picture: "images/uranus.jpg",
+    desc: "Седьмая планета от Солнца, вращается с наклоном на бок."
+});
 });
 
 module.exports = router;
